@@ -39,6 +39,7 @@ Tip: use the R studio shortcut Alt+ - (Alt and the minus sign) to easily create 
 ```{r}
 y <- 6
 x+y
+
 ```
 
 
@@ -81,6 +82,7 @@ sqrt(4) # base R
 
 4 %>%
   sqrt  # "pipe" operator (you can read is as "and then...")
+
 ```
 
 Tip: use the R Studio shortcut Ctrl + Sft + M to create the pipe operator %>%
@@ -113,6 +115,10 @@ To read in a file that is saved in the same directory as the .Rproj file:
 ```{r}
 library(here)
 fev_data <- read_csv(here("fev.csv"))
+
+#this will only work if the file is in the same folder as the R project
+#I tend to set up folders within this for data, so needs an additional 
+#directory reference in the code
 ```
 
 (Remember to install the "here" package the first time.)
@@ -121,6 +127,7 @@ fev_data <- read_csv(here("fev.csv"))
 
 ```{r}
 # Add your code here!
+fev_data <- read_csv(here("Inputs/fev.csv"))
 ```
 
 Look at the top few rows of the data:
@@ -150,6 +157,9 @@ There is a text file in your dataset so you can practice: psa.txt
 
 ```{r}
 # Add your code here!
+psa_data <- read_tsv(here("Inputs/psa.txt"))
+
+head(psa_data)
 ```
 
 --> Have a look at the "Useful arguments" section of the data import cheat sheet. 
@@ -157,14 +167,21 @@ Use a few of them when you read in fev.csv and look at the data, is that what yo
 
 ```{r}
 # Add your code here!
+fev_data <- read_csv(here("Inputs/fev.csv"),
+                     col_names = TRUE,
+                     col_types = NULL,
+                     trim_ws = TRUE,
+                     show_col_types = FALSE)
 ```
 
 --> Apply the summary function to a tibble. What does it do?
 
 ```{r}
 # Add your code here!
+summary(fev_data)
 ```
-
+The summary function takes each variable and performs summary statistics on them
+It gives the Min, Max, Median, Mean and 1st & 3rd quartile values for that variable
 
 ### Operating on data: columns
 
@@ -179,8 +196,8 @@ length(fev_data$fev)
 Other useful functions for tibbles and data frames:
 
 ```{r}
-names(fev_data)
-dim(fev_data)
+names(fev_data) # tells you the names of the variables
+dim(fev_data) #tells you the dimension of the matrix (ie the number of rows & columns)
 ```
 
 Other useful functions for columns:

@@ -3,7 +3,7 @@
     "path": "~/University of Aberdeen/DHS/Git/Week_05_Repository/Methods/R_read-data.Rmd",
     "project_path": "Methods/R_read-data.Rmd",
     "type": "r_markdown",
-    "hash": "0",
+    "hash": "1026491636",
     "contents": "",
     "dirty": false,
     "created": 1697625778194.0,
@@ -11,14 +11,17 @@
     "relative_order": 1,
     "properties": {
         "source_window_id": "",
-        "Source": "Source"
+        "Source": "Source",
+        "cursorPosition": "208,0",
+        "scrollLine": "197",
+        "last_setup_crc32": "6913F84Ebb338d19"
     },
     "folds": "",
-    "lastKnownWriteTime": 1697625710,
+    "lastKnownWriteTime": 1697706374,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1697625710,
+    "last_content_update": 1697706374732,
     "read_only": false,
     "read_only_alternatives": []
 }

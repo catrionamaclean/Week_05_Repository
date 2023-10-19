@@ -1,0 +1,6 @@
+"0","# Add your code here!"
+"0","fev_data <- read_csv(here(""Inputs/fev.csv""),"
+"0","                     col_names = TRUE,"
+"0","                     col_types = NULL,"
+"0","                     trim_ws = TRUE,"
+"0","                     show_col_types = FALSE)"
